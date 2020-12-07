@@ -14,12 +14,13 @@ git clone https://github.com/asukum/Test1.git
 3) TEST has the test cases files for each page
 4) Utils has the Test Report and Logging
 
-Command to run the Test
+Command to run the Test in a particular Test File
 ```shell
 pytest Tests/test_LoginPage.py
+pytest Tests/test_HomePage.py
 ```
 
-Command to run the Test and generate Report
+Command to run all the Tests and generate Report in ./Reports/testrun.html
 ```shell
-pytest Tests/test_LoginPage.py -v --html=./Reports/testrun.html
+pytest -v --html=./Reports/testrun.html
 ```
