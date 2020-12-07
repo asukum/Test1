@@ -4,4 +4,6 @@ class TestData:
     USERNAME = "codechallenge"
     PASSWORD = "Password123"
 
+    HOME_PAGE_TITLE = "Dexcom CLARITY"
+
 

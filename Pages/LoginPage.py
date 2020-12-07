@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 from Config.config import TestData
 from Pages.BasePage import BasePage
+from Pages.HomePage import HomePage
 
 
 class LoginPage(BasePage):
@@ -22,7 +23,7 @@ class LoginPage(BasePage):
     def get_login_page_title(self, title):
         return self.get_title(title)
 
-    def is_healthcheck_user_link_exist(self):
+    def is_healthcare_user_link_exist(self):
         return self.is_visible(self.HEALTHCARE_USERS_BUTTON)
 
     def is_home_user_link_exist(self):
@@ -39,4 +40,5 @@ class LoginPage(BasePage):
         self.do_send_keys(self.HOME_USERS_USERNAME, username)
         self.do_send_keys(self.HOME_USERS_PASSWORD, password)
         self.do_click(self.HOME_USERS_LOGIN_BUTTON)
+        return HomePage(self.driver)
 

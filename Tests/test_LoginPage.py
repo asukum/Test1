@@ -7,12 +7,19 @@ from Utils.Logging.logging import logBase
 
 
 class Test_Login(BaseTest, logBase):
-
-    def test_healthcheck_user_link_exist(self):
+    # Test case to check whether the health Care User Login link exist
+    def test_healthcare_user_link_exist(self):
         self.loginPage = LoginPage(self.driver)
-        flag = self.loginPage.is_healthcheck_user_link_exist()
+        flag = self.loginPage.is_healthcare_user_link_exist()
         assert flag
 
+    # Test case to check whether the Home User Login link exist
+    def test_home_user_link_exist(self):
+        self.loginPage = LoginPage(self.driver)
+        flag = self.loginPage.is_home_user_link_exist()
+        assert flag
+
+    # Test case to Select Home User and Login
     def test_login(self):
         self.loginPage = LoginPage(self.driver)
         self.loginPage.select_user_type("home")
